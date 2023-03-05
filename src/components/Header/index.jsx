@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import logo from '../../assets/images/logo.svg'
 import styled from 'styled-components'
-import colors from '../../utils/style/colors'
+import colors from '../../utils/styles/colors'
 
 const StyledLink = styled(Link)`
   padding: 15px;

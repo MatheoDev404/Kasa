@@ -1,11 +1,11 @@
-function Page404() {
+function Error() {
   return (
-    <div className="Page404">
-      <header className="Page404-header">
-        <h1>Page 4040</h1>
+    <div className="Error">
+      <header className="Error-header">
+        <h1>Page 404</h1>
       </header>
     </div>
   )
 }
 
-export default Page404
+export default Error
