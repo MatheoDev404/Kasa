@@ -1,6 +1,5 @@
-import '../../styles/Home.css'
-import Card from '../../components/Card'
-import { logementList } from '../../datas/logementList'
+import Card from '../components/Card'
+import { logementList } from '../datas/logementList'
 
 function Home() {
   return (

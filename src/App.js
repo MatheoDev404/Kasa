@@ -6,19 +6,9 @@ import Logement from './pages/Logement'
 import Page404 from './components/Error'
 import Header from './components/Header'
 
-import { createGlobalStyle } from 'styled-components'
-
-// STYLE GLOBAL
-const GlobalStyle = createGlobalStyle`
-    div {
-        font-family: 'Trebuchet MS', Helvetica, sans-serif;
-    }
-`
-
 function App() {
   return (
     <Router>
-      <GlobalStyle />
       <Header />
       <Routes>
         <Route exact path="/" element={<Home />}></Route>
