@@ -6,6 +6,8 @@ import Logement from './pages/Logement'
 import Page404 from './components/Error'
 import Header from './components/Header'
 
+import './styles/App.scss'
+
 function App() {
   return (
     <Router>
