@@ -1,7 +1,28 @@
 import Card from '../components/Card'
-import { logementList } from '../datas/logementList'
+import { useState, useEffect } from 'react'
 
 function Home() {
+  const [logements, setlogements] = useState([])
+
+  const getData = () => {
+    fetch('datas/logementList.json', {
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+    })
+      .then(function (response) {
+        return response.json()
+      })
+      .then(function (logements) {
+        setlogements(logements)
+      })
+  }
+
+  useEffect(() => {
+    getData()
+  }, [])
+
   return (
     <div className="Home">
       <h1 className="Home__title">
@@ -11,7 +32,7 @@ function Home() {
         </span>
       </h1>
       <section className="Home__gallery">
-        {logementList.map((logement) => (
+        {logements.map((logement) => (
           <Card
             key={logement.id}
             id={logement.id}

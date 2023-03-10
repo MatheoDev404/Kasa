@@ -4,9 +4,11 @@
 // components
 @import './components/Header';
 @import './components/Card';
+@import './components/ImageSlider';
 
 // pages
 @import './pages/Home';
+@import './pages/Logement';
 
 body {
   margin: 40px 5%;
