@@ -1,10 +1,31 @@
-#Header {
+@import '../variables';
+@import '../mixins';
+
+.Header {
   display: flex;
   justify-content: space-between;
-  .Header-nav a {
-    padding: 15px;
-    color: #8186a0;
-    text-decoration: none;
-    font-size: 18px;
+  align-items: center;
+  margin-bottom: 30px;
+  &__logo {
+    height: 47px;
+    @include media-min($media-desktop) {
+      height: 68px;
+    }
+  }
+  &__nav {
+    display: flex;
+    &__link {
+      margin: 10px;
+      color: $primary-color;
+      text-decoration: none;
+      font-size: 16px;
+      @include media-min($media-desktop) {
+        font-size: 24px;
+        margin: 25px;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }

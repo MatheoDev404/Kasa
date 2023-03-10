@@ -4,17 +4,22 @@ import { logementList } from '../datas/logementList'
 function Home() {
   return (
     <div className="Home">
-      <header className="Home-header">
-        <h1>Home</h1>
-
+      <h1 className="Home__title">
+        <span className="Home__title--text">
+          Chez vous,
+          <span className="Home__title--text__br">partout et ailleurs</span>
+        </span>
+      </h1>
+      <section className="Home__gallery">
         {logementList.map((logement) => (
           <Card
             key={logement.id}
-            title={logement.name}
+            id={logement.id}
+            title={logement.title}
             picture={logement.cover}
           />
         ))}
-      </header>
+      </section>
     </div>
   )
 }

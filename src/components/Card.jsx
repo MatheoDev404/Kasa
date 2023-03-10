@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types'
 import DefaultPicture from '../assets/images/logo.svg'
+import { Link } from 'react-router-dom'
 
-function Card({ title, picture }) {
+function Card({ title, picture, id }) {
   return (
-    <div>
-      <img src={picture} alt="logement" />
-      <span>title{title}</span>
-    </div>
+    <Link to={{ pathname: `/logement/${id}` }} className="Card">
+      <img className="Card__img" src={picture} alt="logement" />
+      <span className="Card__title">{title}</span>
+    </Link>
   )
 }
 
