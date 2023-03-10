@@ -1,12 +1,16 @@
 .Slider {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
   height: 100%;
   &__arrow {
     &--previous {
       position: absolute;
       top: 50%;
       transform: translate(0, -50%);
-      left: 32px;
+      left: 1%;
       font-size: 45px;
       color: #fff;
       z-index: 1;
@@ -16,7 +20,7 @@
       position: absolute;
       top: 50%;
       transform: translate(0, -50%);
-      right: 32px;
+      right: 1%;
       font-size: 45px;
       color: #fff;
       z-index: 1;
@@ -29,14 +33,40 @@
     border-radius: 10px;
     background-size: cover;
     background-position: center;
+    @include media-min($media-desktop) {
+      border-radius: 25px;
+    }
   }
   &__dotContainer {
+    width: 100%;
     display: flex;
     justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     &--dot {
       margin: 0 3px;
       cursor: pointer;
-      font-size: 20px;
+      font-size: 30px;
+      color: #fff;
+      @include media-min($media-desktop) {
+        display: none;
+      }
+    }
+  }
+  &__indexContainer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    overflow: hidden;
+    @include media-min($media-desktop) {
+      width: 100%;
+    }
+    &--index {
+      color: #fff;
     }
   }
 }

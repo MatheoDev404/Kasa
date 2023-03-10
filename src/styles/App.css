@@ -88,13 +88,17 @@
 
 .Slider {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
   height: 100%;
 }
 .Slider__arrow--previous {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-  left: 32px;
+  left: 1%;
   font-size: 45px;
   color: #fff;
   z-index: 1;
@@ -104,7 +108,7 @@
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-  right: 32px;
+  right: 1%;
   font-size: 45px;
   color: #fff;
   z-index: 1;
@@ -117,14 +121,46 @@
   background-size: cover;
   background-position: center;
 }
+@media screen and (min-width: 1024px) {
+  .Slider__image {
+    border-radius: 25px;
+  }
+}
 .Slider__dotContainer {
+  width: 100%;
   display: flex;
   justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 .Slider__dotContainer--dot {
   margin: 0 3px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 30px;
+  color: #fff;
+}
+@media screen and (min-width: 1024px) {
+  .Slider__dotContainer--dot {
+    display: none;
+  }
+}
+.Slider__indexContainer {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  overflow: hidden;
+}
+@media screen and (min-width: 1024px) {
+  .Slider__indexContainer {
+    width: 100%;
+  }
+}
+.Slider__indexContainer--index {
+  color: #fff;
 }
 
 .Home {
@@ -201,9 +237,14 @@
   height: 100%;
 }
 .Logement__slider--container {
-  width: 500px;
-  height: 280px;
+  width: 100%;
+  height: 255px;
   margin: 0 auto;
+}
+@media screen and (min-width: 1024px) {
+  .Logement__slider--container {
+    height: 415px;
+  }
 }
 
 body {

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 
 function Logement() {
   const { id } = useParams()
+
   const [logementImages, setlogementImages] = useState([])
 
   const getData = () => {
@@ -28,23 +29,10 @@ function Logement() {
   useEffect(() => {
     getData()
   }, [])
-  // return (
-  //   <div className="Logement">
-  //     <h1 className="Logement__title">Logement</h1>
-  //     <div className="Logement__container">
-  //       <ImageSlider slides={logementImages} />
-  //     </div>
-  //   </div>
-  // )
-  const containerStyles = {
-    width: '500px',
-    height: '280px',
-    margin: '0 auto',
-  }
+
   return (
     <div className="Logement">
-      <h1 className="Logement__title">Logement</h1>
-      <div className="Logement__slider--container" style={{ containerStyles }}>
+      <div className="Logement__slider--container">
         <ImageSlider slides={logementImages} />
       </div>
     </div>

@@ -33,17 +33,23 @@ const ImageSlider = ({ slides }) => {
           ❱
         </div>
       </div>
-      <div className="Slider__image" style={slideStylesWidthBackground}></div>
-      <div className="Slider__dotContainer">
-        {slides.map((slide, slideIndex) => (
-          <div
-            className="Slider__dotContainer--dot"
-            key={slideIndex}
-            onClick={() => goToSlide(slideIndex)}
-          >
-            ●
-          </div>
-        ))}
+      <div className="Slider__image" style={slideStylesWidthBackground}>
+        <div className="Slider__dotContainer">
+          {slides.map((slide, slideIndex) => (
+            <div
+              className="Slider__dotContainer--dot"
+              key={slideIndex}
+              onClick={() => goToSlide(slideIndex)}
+            >
+              ●
+            </div>
+          ))}
+        </div>
+        <div className="Slider__indexContainer">
+          <p className="Slider__indexContainer--index">
+            {currentIndex + 1}/{slides.length}
+          </p>
+        </div>
       </div>
     </div>
   )
