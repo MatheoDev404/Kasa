@@ -5,7 +5,8 @@ import { useState, useEffect } from 'react'
 function Logement() {
   const { id } = useParams()
 
-  const [logementImages, setlogementImages] = useState([])
+  const [logement, setLogement] = useState({})
+  // const [logementImages, setLogementImages] = useState([])
 
   const getData = () => {
     fetch('../datas/logementList.json', {
@@ -19,7 +20,13 @@ function Logement() {
       })
       .then(function (logements) {
         const currentLogement = logements.find((logement) => logement.id === id)
-        setlogementImages(currentLogement.pictures)
+        setLogement(currentLogement)
+
+        // for (let logement of logements) {
+        //   if (logement.id === id) {
+        //     setLogementImages(logement.pictures)
+        //   }
+        // }
       })
   }
 
@@ -30,7 +37,8 @@ function Logement() {
   return (
     <div className="Logement">
       <div className="Logement__slider--container">
-        <ImageSlider slides={logementImages} />
+        <ImageSlider slides={logement.pictures} />
+        {/* <ImageSlider slides={logementImages} /> */}
       </div>
     </div>
   )
