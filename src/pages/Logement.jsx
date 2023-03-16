@@ -18,17 +18,14 @@ function Logement() {
         return response.json()
       })
       .then(function (logements) {
-        for (let logement of logements) {
-          if (logement.id === id) {
-            setlogementImages(logement.pictures)
-          }
-        }
+        const currentLogement = logements.find((logement) => logement.id === id)
+        setlogementImages(currentLogement.pictures)
       })
   }
 
   useEffect(() => {
     getData()
-  }, [])
+  })
 
   return (
     <div className="Logement">
