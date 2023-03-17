@@ -1,0 +1,22 @@
+.Collapse {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &__header {
+    width: 100%;
+    .arrow--up {
+      margin-left: auto;
+      margin-right: 1vw;
+      transition: transform 0.5s ease;
+      width: 14px;
+      height: 23px;
+    }
+    .arrow--down {
+      transform: rotate(180deg);
+      width: 14px;
+      height: 23px;
+      margin-right: 1vw;
+      margin-left: auto;
+    }
+  }
+}

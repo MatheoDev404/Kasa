@@ -5,12 +5,18 @@
 @import './components/Header';
 @import './components/Card';
 @import './components/ImageSlider';
+@import './components/Tag';
+@import './components/Collapse';
 
 // pages
 @import './pages/Home';
 @import './pages/Logement';
 
 body {
-  margin: 40px 5%;
+  margin: 20px;
   @include font-family-montserrat;
+  @include media-min($media-desktop) {
+    max-width: 1240px;
+    margin: 40px auto;
+  }
 }

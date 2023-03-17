@@ -34,7 +34,7 @@ function Home() {
       <section className="Home__gallery">
         {logements.map((logement) => (
           <Card
-            key={logement.id}
+            key={'card-' + logement.id}
             id={logement.id}
             title={logement.title}
             picture={logement.cover}

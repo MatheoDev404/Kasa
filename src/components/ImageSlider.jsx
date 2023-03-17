@@ -1,6 +1,7 @@
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 
-const ImageSlider = ({ slides }) => {
+function ImageSlider({ slides }) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const goToPrevious = () => {
@@ -53,6 +54,14 @@ const ImageSlider = ({ slides }) => {
       </div>
     </div>
   )
+}
+
+ImageSlider.propTypes = {
+  slides: PropTypes.array.isRequired,
+}
+
+ImageSlider.defaultProps = {
+  slides: [],
 }
 
 export default ImageSlider
