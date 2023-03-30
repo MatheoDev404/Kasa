@@ -1,8 +1,12 @@
 .Logement {
-  width: 100%;
+  margin: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  @include media-min($media-desktop) {
+    max-width: 1240px;
+    margin: 40px auto;
+  }
   &__slider--container {
     width: 100%;
     height: 255px;
@@ -87,10 +91,12 @@
     }
   }
   &__info--flexContainer {
+    padding-top: 15px;
     display: flex;
     flex-wrap: wrap;
     @include media-min($media-desktop) {
       flex-wrap: nowrap;
+      padding-top: 30px;
     }
     div {
       &:first-child {

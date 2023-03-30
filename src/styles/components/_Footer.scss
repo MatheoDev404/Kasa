@@ -1,0 +1,21 @@
+.Footer {
+  margin-top: 40px;
+  padding: 62px 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  background-color: #000;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+
+  &__logo {
+    height: 40px;
+    width: 122px;
+    margin: 0 auto 15px;
+  }
+  &__copyright {
+    font-size: 12px;
+    font-weight: 500;
+  }
+}

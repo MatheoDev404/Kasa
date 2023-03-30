@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import DefaultPicture from '../assets/images/logo.svg'
+import DefaultPicture from '../assets/images/header_logo.svg'
 import { Link } from 'react-router-dom'
 
 function Card({ title, picture, id }) {

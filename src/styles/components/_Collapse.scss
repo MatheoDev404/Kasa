@@ -8,10 +8,14 @@
     color: #ffffff;
     background-color: $primary-color;
     align-items: center;
+    &:hover {
+      cursor: pointer;
+    }
     &__title {
       padding-left: 20px;
       font-size: 13px;
       font-weight: 500;
+
       @include media-min($media-desktop) {
         font-size: 18px;
       }

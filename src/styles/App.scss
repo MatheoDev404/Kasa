@@ -7,16 +7,13 @@
 @import './components/ImageSlider';
 @import './components/Tag';
 @import './components/Collapse';
+@import './components/Footer';
 
 // pages
 @import './pages/Home';
 @import './pages/Logement';
 
 body {
-  margin: 20px;
   @include font-family-montserrat;
-  @include media-min($media-desktop) {
-    max-width: 1240px;
-    margin: 40px auto;
-  }
+  margin: 0px;
 }

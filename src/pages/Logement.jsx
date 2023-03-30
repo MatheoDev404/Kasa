@@ -2,13 +2,14 @@ import ImageSlider from '../components/ImageSlider'
 import Tag from '../components/Tag'
 import Collapse from '../components/Collapse'
 
-import { useParams, redirect } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 import ratingStarFull from '../assets/images/full_star.png'
 import ratingStarEmpty from '../assets/images/empty_star.png'
 
 function Logement() {
+  const navigate = useNavigate()
   const params = useParams()
 
   const [logement, setLogement] = useState(null)
@@ -34,10 +35,10 @@ function Logement() {
       .then((existingLogement) => {
         if (existingLogement === 'not exist') {
           // a changer avec un navigate to dans le return
-          return redirect('/page404')
+          console.log('not exist')
+          navigate('/page404')
         } else if (logement === null) {
           setLogement(existingLogement)
-          console.log(logement)
         }
       })
   }
@@ -49,9 +50,8 @@ function Logement() {
   return (
     <>
       {logement != null ? (
-        <div className="Logement">
+        <div className="Logement mainContainer">
           <div className="Logement__slider--container">
-            {/* <ImageSlider slides={logement.pictures} /> */}
             <ImageSlider slides={logement.pictures} />
           </div>
           <div className="Logement__infoContainer">

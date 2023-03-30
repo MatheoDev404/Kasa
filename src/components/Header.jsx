@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
-import logo from '../assets/images/logo.svg'
+import logo from '../assets/images/header_logo.svg'
 
 function Header() {
   return (
-    <header className="Header">
+    <header className="Header mainContainer">
       <img src={logo} className="Header__logo" alt="logo" />
       <nav className="Header__nav">
         <Link className="Header__nav__link" to="/">
