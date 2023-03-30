@@ -88,5 +88,18 @@
   }
   &__info--flexContainer {
     display: flex;
+    flex-wrap: wrap;
+    @include media-min($media-desktop) {
+      flex-wrap: nowrap;
+    }
+    div {
+      &:first-child {
+        margin-right: 0px;
+        margin-bottom: 20px;
+        @include media-min($media-desktop) {
+          margin-right: 70px;
+        }
+      }
+    }
   }
 }
