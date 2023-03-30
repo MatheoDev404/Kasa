@@ -3,7 +3,7 @@ import logo from '../assets/images/header_logo.svg'
 
 function Header() {
   return (
-    <header className="Header mainContainer">
+    <header className="Header">
       <img src={logo} className="Header__logo" alt="logo" />
       <nav className="Header__nav">
         <Link className="Header__nav__link" to="/">

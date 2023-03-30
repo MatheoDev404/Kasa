@@ -1,9 +1,15 @@
+import { Link } from 'react-router-dom'
+
 function Error() {
   return (
     <div className="Error">
-      <header className="Error-header">
-        <h1>Page 404</h1>
-      </header>
+      <span className="Error__404">404</span>
+      <p className="Error__text">
+        Oups! La page que vous demandez n'existe pas.
+      </p>
+      <Link className="Error__link" to="/">
+        Retourner sur la page d’accueil
+      </Link>
     </div>
   )
 }

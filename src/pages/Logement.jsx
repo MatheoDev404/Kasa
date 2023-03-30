@@ -50,7 +50,7 @@ function Logement() {
   return (
     <>
       {logement != null ? (
-        <div className="Logement mainContainer">
+        <div className="Logement">
           <div className="Logement__slider--container">
             <ImageSlider slides={logement.pictures} />
           </div>

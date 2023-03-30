@@ -24,7 +24,7 @@ function Home() {
   }, [])
 
   return (
-    <div className="Home mainContainer">
+    <div className="Home">
       <h1 className="Home__title">
         <span className="Home__title--text">
           Chez vous,

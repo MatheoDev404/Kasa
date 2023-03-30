@@ -17,5 +17,8 @@
   &__copyright {
     font-size: 12px;
     font-weight: 500;
+    @include media-min($media-desktop) {
+      font-size: 24px;
+    }
   }
 }

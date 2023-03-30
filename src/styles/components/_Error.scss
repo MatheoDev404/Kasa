@@ -1,0 +1,36 @@
+.Error {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  color: $primary-color;
+  @include media-min($media-desktop) {
+    max-width: 1240px;
+    margin: 40px auto;
+  }
+  &__404 {
+    font-size: 96px;
+    font-weight: 700;
+    margin: 200px 0 10px;
+    @include media-min($media-desktop) {
+      font-size: 288px;
+      margin: 180px 0 10px;
+    }
+  }
+  &__text {
+    font-size: 18px;
+    margin: 0 0 130px;
+    @include media-min($media-desktop) {
+      font-size: 36px;
+    }
+  }
+  &__link {
+    font-size: 14px;
+    color: $primary-color;
+    @include media-min($media-desktop) {
+      font-size: 18px;
+    }
+  }
+}

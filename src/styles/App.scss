@@ -8,10 +8,12 @@
 @import './components/Tag';
 @import './components/Collapse';
 @import './components/Footer';
+@import './components/Error';
 
 // pages
 @import './pages/Home';
 @import './pages/Logement';
+@import './pages/About';
 
 body {
   @include font-family-montserrat;

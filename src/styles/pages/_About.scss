@@ -1,0 +1,45 @@
+.About {
+  margin: 20px;
+  @include media-min($media-desktop) {
+    max-width: 1240px;
+    margin: 40px auto;
+  }
+  &__banner--container {
+    position: relative;
+    overflow: hidden;
+    height: 223px;
+    margin-bottom: 30px;
+    @include media-min($media-desktop) {
+      max-width: 1240px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 223px;
+      border-radius: 25px;
+      background-image: url('../../assets/images/about_banner_mobile.png');
+      background-size: cover;
+      background-position: bottom;
+      filter: brightness(70%);
+      @include media-min($media-tablette) {
+        background-image: url('../../assets/images/about_banner_desktop.png');
+        background-position: center;
+      }
+      @include media-min($media-desktop) {
+        margin: 0 auto 30px;
+      }
+    }
+  }
+  &__collapse--container {
+    div {
+      margin-bottom: 30px;
+      @include media-min($media-desktop) {
+        max-width: 1020px;
+        margin: 0 auto 30px;
+      }
+    }
+  }
+}
