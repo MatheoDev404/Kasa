@@ -73,18 +73,6 @@
         }
       }
     }
-
-    &__rating {
-      img {
-        margin-right: 10px;
-        width: 15px;
-        height: 15px;
-        @include media-min($media-desktop) {
-          width: 30px;
-          height: 30px;
-        }
-      }
-    }
   }
   &__info--flexContainer {
     padding-top: 15px;

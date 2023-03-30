@@ -1,12 +1,10 @@
 import ImageSlider from '../components/ImageSlider'
 import Tag from '../components/Tag'
 import Collapse from '../components/Collapse'
+import RatingStars from '../components/RatingStars'
 
 import { useParams, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-
-import ratingStarFull from '../assets/images/full_star.png'
-import ratingStarEmpty from '../assets/images/empty_star.png'
 
 function Logement() {
   const navigate = useNavigate()
@@ -77,12 +75,7 @@ function Logement() {
               />
             </div>
             <div className="Logement__host--flexContainer__rating">
-              {/* {logement.rating} */}
-              <img src={ratingStarFull} alt="" />
-              <img src={ratingStarFull} alt="" />
-              <img src={ratingStarFull} alt="" />
-              <img src={ratingStarFull} alt="" />
-              <img src={ratingStarEmpty} alt="" />
+              <RatingStars rating={logement.rating} />
             </div>
           </div>
           <div className="Logement__info--flexContainer">
