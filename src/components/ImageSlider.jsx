@@ -4,6 +4,13 @@ import PropTypes from 'prop-types'
 function ImageSlider({ slides }) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
+  const picturesUrl = []
+  slides.forEach((pictureUrl) => {
+    const img = new Image()
+    img.src = pictureUrl
+    picturesUrl.push(img.src)
+  })
+
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1
@@ -21,7 +28,7 @@ function ImageSlider({ slides }) {
   }
 
   const slideStylesWidthBackground = {
-    backgroundImage: `url(${slides[currentIndex]})`,
+    backgroundImage: `url(${picturesUrl[currentIndex]})`,
   }
 
   return (
@@ -36,7 +43,7 @@ function ImageSlider({ slides }) {
       </div>
       <div className="Slider__image" style={slideStylesWidthBackground}>
         <div className="Slider__dotContainer">
-          {slides.map((slide, slideIndex) => (
+          {slides.map((slideIndex) => (
             <div
               className="Slider__dotContainer--dot"
               key={slideIndex}
