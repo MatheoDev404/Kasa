@@ -37,7 +37,7 @@ function Collapse({ title, content }) {
       </button>
       <div
         className="Collapse__content"
-        style={{ maxHeight: `${collapseHeight}` }}
+        style={{ height: `${collapseHeight}` }}
       >
         {formatContent(content)}
       </div>

@@ -51,6 +51,7 @@
     font-weight: 400;
     color: $primary-color;
     line-height: 142%;
+    transition: height 0.5s ease;
     @include media-min($media-desktop) {
       font-size: 18px;
     }
