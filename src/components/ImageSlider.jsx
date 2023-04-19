@@ -4,11 +4,9 @@ import PropTypes from 'prop-types'
 function ImageSlider({ slides }) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
-  const picturesUrl = []
   slides.forEach((pictureUrl) => {
     const img = new Image()
     img.src = pictureUrl
-    picturesUrl.push(img.src)
   })
 
   const goToPrevious = () => {
@@ -28,7 +26,7 @@ function ImageSlider({ slides }) {
   }
 
   const slideStylesWidthBackground = {
-    backgroundImage: `url(${picturesUrl[currentIndex]})`,
+    backgroundImage: `url(${slides[currentIndex]})`,
   }
 
   return (
