@@ -31,31 +31,37 @@ function ImageSlider({ slides }) {
 
   return (
     <div className="Slider">
-      <div className="Slider__arrow">
-        <div className="Slider__arrow--previous" onClick={goToPrevious}>
-          ❰
+      {slides.length < 1 && (
+        <div className="Slider__arrow">
+          <div className="Slider__arrow--previous" onClick={goToPrevious}>
+            ❰
+          </div>
+          <div className="Slider__arrow--next" onClick={goToNext}>
+            ❱
+          </div>
         </div>
-        <div className="Slider__arrow--next" onClick={goToNext}>
-          ❱
-        </div>
-      </div>
+      )}
       <div className="Slider__image" style={slideStylesWidthBackground}>
-        <div className="Slider__dotContainer">
-          {slides.map((slideIndex) => (
-            <div
-              className="Slider__dotContainer--dot"
-              key={slideIndex}
-              onClick={() => goToSlide(slideIndex)}
-            >
-              ●
-            </div>
-          ))}
-        </div>
-        <div className="Slider__indexContainer">
-          <p className="Slider__indexContainer--index">
-            {currentIndex + 1}/{slides.length}
-          </p>
-        </div>
+        {slides.length < 1 && (
+          <div className="Slider__dotContainer">
+            {slides.map((slideIndex) => (
+              <div
+                className="Slider__dotContainer--dot"
+                key={slideIndex}
+                onClick={() => goToSlide(slideIndex)}
+              >
+                ●
+              </div>
+            ))}
+          </div>
+        )}
+        {slides.length < 1 && (
+          <div className="Slider__indexContainer">
+            <p className="Slider__indexContainer--index">
+              {currentIndex + 1}/{slides.length}
+            </p>
+          </div>
+        )}
       </div>
     </div>
   )
