@@ -31,7 +31,7 @@ function ImageSlider({ slides }) {
 
   return (
     <div className="Slider">
-      {slides.length < 1 && (
+      {slides.length > 1 && (
         <div className="Slider__arrow">
           <div className="Slider__arrow--previous" onClick={goToPrevious}>
             ❰
@@ -42,7 +42,7 @@ function ImageSlider({ slides }) {
         </div>
       )}
       <div className="Slider__image" style={slideStylesWidthBackground}>
-        {slides.length < 1 && (
+        {slides.length > 1 && (
           <div className="Slider__dotContainer">
             {slides.map((slideIndex) => (
               <div
@@ -55,7 +55,7 @@ function ImageSlider({ slides }) {
             ))}
           </div>
         )}
-        {slides.length < 1 && (
+        {slides.length > 1 && (
           <div className="Slider__indexContainer">
             <p className="Slider__indexContainer--index">
               {currentIndex + 1}/{slides.length}
