@@ -59,7 +59,7 @@ function Logement() {
             </p>
             <div className="Logement__infoContainer__tagContainer">
               {logement.tags.map((tag, index) => (
-                <Tag key={'tag-' + index} tagName={tag} />
+                <Tag key={index} tagName={tag} />
               ))}
             </div>
           </div>
