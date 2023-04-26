@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 import arrow from '../assets/images/arrow.png'
 
 function Collapse({ title, content }) {
@@ -43,6 +44,15 @@ function Collapse({ title, content }) {
       </div>
     </div>
   )
+}
+
+Collapse.propTypes = {
+  title: PropTypes.string.isRequired,
+}
+
+Collapse.defaultProps = {
+  title: '',
+  content: '',
 }
 
 export default Collapse

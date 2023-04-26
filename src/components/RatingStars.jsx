@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import ratingStarFull from '../assets/images/full_star.png'
 import ratingStarEmpty from '../assets/images/empty_star.png'
 
@@ -16,6 +17,14 @@ function RatingStars({ rating }) {
       )}
     </div>
   )
+}
+
+RatingStars.propTypes = {
+  rating: PropTypes.string.isRequired,
+}
+
+RatingStars.defaultProps = {
+  rating: '',
 }
 
 export default RatingStars
