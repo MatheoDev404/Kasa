@@ -44,11 +44,11 @@ function ImageSlider({ slides }) {
       <div className="Slider__image" style={slideStylesWidthBackground}>
         {slides.length > 1 && (
           <div className="Slider__dotContainer">
-            {slides.map((slideIndex) => (
+            {slides.map((slide, index) => (
               <div
                 className="Slider__dotContainer--dot"
-                key={slideIndex}
-                onClick={() => goToSlide(slideIndex)}
+                key={index}
+                onClick={() => goToSlide(index)}
               >
                 ●
               </div>
