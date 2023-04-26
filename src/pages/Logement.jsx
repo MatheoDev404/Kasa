@@ -32,8 +32,6 @@ function Logement() {
       })
       .then((existingLogement) => {
         if (existingLogement === 'not exist') {
-          // a changer avec un navigate to dans le return
-          console.log('not exist')
           navigate('/page404')
         } else if (logement === null) {
           setLogement(existingLogement)
